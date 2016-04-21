@@ -1,0 +1,12 @@
+# put the following content into /etc/systemd/system/minoTour-control.service
+[Unit]
+Description=minoTour control script mT_control
+
+[Service]
+TimeoutStartSec=10
+User=minion
+ExecStart=/opt/minoTour/nefario/mT_control.pl > /var/log/mT_control.log 2>&1'
+WorkingDirectory=/opt/minoTour/nefario
+
+[Install]
+WantedBy=multi-user.target

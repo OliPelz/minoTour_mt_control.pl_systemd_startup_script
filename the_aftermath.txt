@@ -1,0 +1,15 @@
+# reload systemd services (do only once)
+$ systemctl daemon-reload
+
+# to start, stop restart the service
+$ systemctl start minotour-control.service
+$ systemctl stop minotour-control.service
+$ systemctl restart minotour-control.service
+
+# enable on system boot (do only once)
+$ systemctl enable minotour-control.service
+
+# to view log files and get information
+$ systemctl status minotour-control.service
+$ tail -f /var/log/mT_control.log
+journalctl --unit=minotour-control

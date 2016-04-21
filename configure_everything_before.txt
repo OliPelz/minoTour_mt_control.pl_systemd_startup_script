@@ -1,0 +1,9 @@
+# log in as root, create log file destination
+$ touch /var/log/mT_control.log
+$ useradd minion
+$ passwd minion
+# check out minoTour repo into some dir e.g. /opt
+$ cd /opt
+$ git clone https://github.com/minoTour/minoTour.git
+# change permissions to system user minion so we can run it as systemd user process
+$ chown minion:minion /opt/minoTour/nefario -R
